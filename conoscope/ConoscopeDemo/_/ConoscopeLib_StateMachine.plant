@@ -1,0 +1,57 @@
+@startuml
+
+title **ConoscopeLib** state machine
+
+Undefined                     : thread is not running 
+Idle                          :
+
+CmdOpenProcessing             : **-**Check CFG path location\n      copy CFG files in this directory manually or\n       use CmdCfgFileRead to get the cfg files from the camera - may take a while \n\n\n**__JSON OUTPUT__**\n -> CfgPath 
+CmdResetProcessing            : Restart the conoscope\n\n**__JSON OUTPUT__**\n  -> CfgPath 
+
+CmdCfgFileReadProcessing      : Read the content of camera ram and copy it in CFG directory \n\nThis function is asynchronous\nuse CfgFileStatus to retrieve current processing progress
+CmdSetupProcessing            : **-** Program the temperature (asynchonous)\n      (please check the temperature status with CmdGetSetup)\n**-** Set filter wheel position\n**-** Set ND filter position\n
+
+CmdMeasureProcessing          : **-** Read camera CFG if not already loaded for this camera
+CmdExportRawProcessing        : **__JSON OUTPUT__**\n -> CaptureFile \n -> SensorTemperature\n -> Filter\n -> Nd\n -> Iris
+CmdExportProcessedProcessing  : **__JSON OUTPUT__**\n -> CaptureFile \n -> SensorTemperature\n -> Filter\n -> Nd\n -> Iris
+'CmdCloseProcessing :
+CmdResetProcessing :
+
+[*]                           -->      Undefined
+Undefined                     -->      Idle                 : ** ^**thread is running
+
+Idle                          -->      CmdOpenProcessing    : ** ^** CmdOpen
+CmdOpenProcessing             -->      Opened               
+'CmdOpenProcessing             ->      Error               
+
+Opened                        -->      CmdSetupProcessing   : ** ^** CmdSetup
+CmdSetupProcessing            ->       Ready
+'CmdSetupProcessing            ->      Error
+
+Opened                        ->       CmdCfgFileReadProcessing : ** ^** CmdCfgFileRead
+CmdCfgFileReadProcessing      ->       Opened
+
+Ready                         -->      CmdMeasureProcessing : ** ^** CmdMeasure
+CmdMeasureProcessing          -->      CaptureDone
+'CmdMeasureProcessing          ->      Error
+
+Ready                         -->      CmdSetupProcessing   : ** ^** CmdSetup
+
+CaptureDone                    -->     CmdMeasureProcessing : ** ^** CmdMeasure
+
+CaptureDone                   -->      CmdExportRawProcessing : ** ^** CmdExportRaw
+CmdExportRawProcessing        -->      CaptureDone
+'CmdExportRawProcessing        ->      Error
+
+CaptureDone                   -->      CmdExportProcessedProcessing : ** ^** CmdExportProcessed
+CmdExportProcessedProcessing  -->      CaptureDone
+'CmdExportProcessedProcessing ->       Error
+
+CaptureDone                   -->      CmdSetupProcessing   : ** ^** CmdSetup
+
+Idle                          ->       CmdResetProcessing    : ** ^** CmdReset
+Error                        -left->   CmdResetProcessing    : ** ^** CmdReset
+
+CmdResetProcessing            -->      CmdOpenProcessing
+
+@enduml

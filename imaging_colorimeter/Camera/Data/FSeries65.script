@@ -1,0 +1,36 @@
+# 
+
+# DAC on CCD Board accessed through Centerfold
+1	18	00010984 # Set VRD to 12V     (12*203 = 2436 = 0x984)
+1	18	000117EE # Set GUARD to 10V   (10*203 = 2030 = 0x7EE)
+1	18	0001232C # Set VOG to 4V      ( 4*203 =  812 = 0x32C)
+1	18	00013196 # Set VSS to 2V      ( 2*203 =  406 = 0x196)
+1	18	00014D7B # Set VDD to 17V     (17*203 = 3451 = 0xD7B)
+1	18	00015196 # Set VCLAMP to 2.35V (2.35*203 =  477 = 0x1DD)
+#1	18	00015196 # Set VCLAMP to 2V   ( 2*203 =  406 = 0x196)
+1	18	000167EE # Set V_RCLKH to 10V (10*203 = 2030 = 0x7EE)
+1	18	00017261 # Set V_RCLKL to 3V  ( 3*203 =  609 = 0x261)
+
+# Anchovies Power Control
+0	21	00000003 # Turn on -10V and +20V
+# DAC on Main Board accessed through Anchovies
+0	20	00010C78 # Set ADJSRC1  to +8  V for HCLK High ( 8*399  = 3192 = 0xC78)
+0	20	00012320 # Set ADJSINK1 to -2  V for HCLK Low  (-2*-400 = 800 = 0x320)
+0	20	00011000 # Set ADJSRC2: unused
+0	20	00013FA0 # Set ADJSINK2 to -10 V for VCLK Low  (-10*-400 = 4000 = 0xFA0)
+
+# Imaging ADC registers
+#1	19	00012026 # set red input to gain 2
+#1	19	00013026 # set green input to gain 2
+#1	19	00011010 # select blue input: Op-amp 2x gain, low-pass filtered
+
+# Setup CCD Imaging controls
+1	11	04080412	# VSIZE = 4+1024+4, HSIZE = 4+4+1024+8+2
+1	12	00080407	# HBIN, Subframe X start & Stop
+1	13	00040403	# VBIN, Subframe Y start & Stop
+# Timing Generator Controls
+1	14	0000010A # T_VDLY, T_VCLK
+1	15	8514E685 # T_HCLK, T_RCLK, T_ADCCLKR, T_ADCCLKW # default 500 KHz
+1	16	437EC8FF # T_CDSCLK1R, T_CDSCLK1F, T_CDSCLK2R, T_CDSCLK2F 
+1	17	00008511 # T_VCLK_FLUSH, T_HCLK_FLUSH (Set VCLK period to two lines of HCLK)
+

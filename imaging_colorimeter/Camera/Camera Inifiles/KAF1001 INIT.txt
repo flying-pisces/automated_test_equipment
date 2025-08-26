@@ -1,0 +1,29 @@
+# 
+#
+# DAC on CCD Board accessed through Centerfold
+1	0x40	0x0000157C # Set VADJ1 to 5.5V
+1	0x41	0x00002A30 # Set VADJ2 to 10.8V (A bit extra)
+1	0x42	0x00002710 # Set VADJ3 to 10.0V
+9	1000	0x0 # wait 1 second
+1	0x43	0x00000001 # Analog VOltage Enable
+9	2000	0x0 # wait 2 seconds
+#
+# Configure the ADC:
+1	0x1001	0x000000D8 # Config Register
+1	0x1001	0x00000240 # Mux Register: Red
+1	0x1001	0x00000426 # Red Gain Register: 2
+1	0x1001	0x00000626 # Grn Gain Register: 2
+1	0x1001	0x00000826 # Blu Gain Register: 2
+1	0x1001	0x00000A10 # Red Offset Register: 19.2mV
+1	0x1001	0x00000C10 # Grn Offset Register: 19.2mV
+1	0x1001	0x00000E10 # Blu Offset Register: 19.2mV
+#
+# Set CCD Readout Parameters
+1	0x81	0x04080412 # SET CCD_SIZE V(4+1024+4=1032=0x0408)xH(4+4+1024+8+2=1042=0x0412)
+1	0x82	0x00080407 # Set SUBFRAME_X     (Start and Stop X)
+1	0x83	0x00040403 # Set SUBFRAME_Y     (Start and Stop Y)
+1	0x84	0x00000000 # Set BIN_CTRL       
+1	0x85	0x23201450 # Set CCD_TIMING 4MHz, t_VCLK_FLUSH = 800x (200탎),t_VDLY = 20x (5탎), t_VCLK = 80x (20탎)
+#1	0x85	0x23201450 # Set CCD_TIMING 4MHz, t_VCLK_FLUSH = 528x (132탎),t_VDLY = 04x (1탎), t_VCLK = 20x ( 5탎)
+#
+#

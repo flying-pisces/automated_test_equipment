@@ -1,0 +1,6 @@
+2020/04/16 08:13:38.414 | [conoscope]          | >>
+2020/04/16 08:13:38.442 | [conoscopeWorker]    | >>
+2020/04/16 08:13:38.460 | [conoscope]          |   ConoscopeLib  0.8.27     [2020/04/14]
+2020/04/16 08:13:38.464 | [conoscope]          |   PipelineLib   0.2.7      [2020/03/30]
+2020/04/16 08:13:38.467 | [conoscopeApp]       | >>
+2020/04/16 08:13:38.470 | [conoscopeAppWorker] | >>

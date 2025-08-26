@@ -1,0 +1,350 @@
+@startuml
+
+participant User as U
+participant ConoscopeSdk as C
+participant TemperatureMonotoring as T
+
+== Initialisation == 
+
+U ->   C: **CmdGetVersion**()
+U <--  C
+rnote right U #c2ffe4
+return value (json formated)
+
+**library version**
+	__key__ "Lib_Date"
+	__key__ "Lib_Version"
+	__key__ "Lib_Name" 
+  
+**pipeline library**
+	__key__ "Pipeline_Date"
+	__key__ "Pipeline_Name"
+	__key__ "Pipeline_Version"
+end note
+
+U ->   C: **CmdGetCmdConfig**(SetupConfig_t& cmdSetupConfig, MeasureConfig_t& cmdMeasureConfig, ProcessingConfig_t& cmdProcessingConfig)
+U <--  C
+rnote right U #c2ffe4
+return last parameter used.
+(those values are stored in config.json file)
+
+	**SetupConfig_t&** cmdSetupConfig
+	**MeasureConfig_t&** cmdMeasureConfig
+	**ProcessingConfig_t&** cmdProcessingConfig
+end note
+
+group configuration (may or may not be configured each time)
+U ->   C: **CmdSetConfig**(ConoscopeSettings_t& config);
+rnote right U #d9f3ff
+
+set **cfgPath**: where cfg files are stored
+set **capturePath**: where captures are stored
+(those values are stored in config.json file)
+end note
+U <--  C
+end
+
+U ->   C: CmdGetConfig(ConoscopeSettings_t& config);
+U <--  C
+rnote right U #c2ffe4
+return settings.
+(those values are stored in config.json file)
+
+**ConoscopeSettings_t&** config
+	cfgPath
+	capturePath
+end note
+
+group debug purpose
+U ->   C: **CmdGetDebugConfig**(ConoscopeDebugSettings_t &conoscopeConfig)
+U <--  C
+rnote right U #c2ffe4
+return debug configuration.
+(those values are stored in config.json file)
+end note
+end
+
+== Debug ==
+
+group debug purpose
+U ->   C: CmdGetInfo();
+U <--  C
+rnote right U #c2ffe4
+return a string with last messages from the library
+end note
+end
+
+newpage
+
+== Usage ==
+
+hnote over C #E86231: state Idle
+
+U ->   C: CmdOpen();
+rnote right U #d9f3ff
+Connect the camera
+and read serial number
+end note
+U <--  C
+rnote right U #c2ffe4
+
+return value (json formated)
+	__key__ "CfgPath" 	this is the location where cfg files will be read
+end note
+
+hnote over C #E86231: state Opened
+
+group CFG files
+
+rnote right U
+Several options:
+	- copy manually CFG files into "CfgPath" directory
+	- read the CFG files from camera. Warning it may take a lot of time
+end note
+
+
+U ->   C: CmdCfgFileRead();
+rnote right U #d9f3ff
+read the CFG files from camera. 
+**This command is asynchronous**
+end note
+U <--  C
+
+U ->   C: CmdCfgFileStatus(CfgFileStatus_t& status);
+rnote right U #d9f3ff
+Get the status of CmdCfgFileRead.
+
+This function to be called regularly until the transfer is done
+end note
+U <--  C
+
+end
+
+U ->   C: CmdSetup(SetupConfig_t& config);
+rnote right U #d9f3ff
+Configure the Conoscope settings:
+	- temperature
+	- filter
+	- nd files
+	- iris installed on the Conoscope (this is not a command)
+
+__Note__: the temperature configuration is asynchronous
+please use CmdSetupStatus to be sure the temperature is locked
+end note
+
+C --> T
+
+activate T
+
+hnote over T #E86231: state Processing
+
+rnote right T
+Temperature regulation is launched,
+but not locked at this point.
+end note
+
+U <--  C
+
+'rnote right U #c2ffe4
+'return value (json formated)
+'  __key__ "TBD"
+'end note
+
+hnote over C #E86231: state Ready
+
+rnote over C 
+Warning, temperature is programmed but not lock yet
+Check the temperature is locked with CmdSetupStatus
+end note
+
+U ->   C: CmdSetupStatus(SetupStatus_t& status);
+rnote right U #d9f3ff
+Return current status of the conoscope setup
+
+	eTemperatureMonitoringState (Processing, Locked, Error)
+	sensorTemperature
+
+	eWheelState 	(Success, Operating, Error)
+	Filter      		Position of the filter wheel
+	Nd          		Position of the ND wheel 
+	Iris        		configuration of the iris
+
+end note
+U <--  C
+'rnote right U #c2ffe4
+'return value (json formated)
+'  __key__ "TBD"
+'end note
+...
+
+hnote over T #E86231: state Locked
+
+rnote right T
+After a while, Temperature regulation is locked.
+Anyway, it is possible to launch measurement 
+even if the temperature is not locked.
+end note
+
+T -> T : temperature is locked
+deactivate T
+
+' hnote over C #E86231: state TBD
+
+newpage
+
+U ->   C: CmdMeasure(MeasureConfig_t& config);
+rnote right U #d9f3ff
+Launch a capture.
+
+	exposureTimeUs  	exposure time in micro seconds
+	nbAcquisition   	number of frames acquired (average)
+	binningFactor   	Not implemented
+	bTestPattern;   	For debug purpose
+
+The image is stored internally
+end note
+U <--  C
+'rnote right U #c2ffe4
+'return value (json formated)
+'  __key__ "TBD"
+'end note
+
+hnote over C #E86231: state CaptureDone
+
+U ->   C: CmdMeasureStatus(MeasureStatus_t& status);
+rnote right U #d9f3ff
+TBD
+end note
+U <--  C
+'rnote right U #c2ffe4
+' return value (json formated)
+' __key__ "TBD"
+'end note
+
+'hnote over C #E86231: state TBD
+
+U ->   C: CmdExportRaw();
+rnote right U #d9f3ff
+Save the capture image in folder set by **CmdSetConfig** (capturePath)
+
+	<TimeStamp>_raw_<index>.bin
+		7920*6004 16bits unsigned little endian byte order
+	<TimeStamp>_raw_<index>.json
+		information about the capture
+
+end note
+U <--  C
+rnote right U #c2ffe4
+return value (json formated)
+  
+  __key__ "CaptureFile"
+
+  __key__ "SensorTemperature"
+  __key__ "Filter"
+  __key__ "Nd"
+  __key__ "Iris"
+end note
+
+'hnote over C #E86231: state TBD
+
+U ->   C: CmdExportProcessed(ProcessingConfig_t& config);
+rnote right U #d9f3ff
+	bBiasCompensation
+	bSensorDefectCorrection
+	bSensorPrnuCorrection
+	bSensorTemperatureCorrection
+	bLinearisation
+	bFlatField
+	bAbsolute
+
+Process image and save in folder set by **CmdSetConfig** (capturePath)
+
+	<TimeStamp>_proc_<index>.bin
+'		7920*6004 16bits unsigned little endian byte order
+		**__TBD__**
+	<TimeStamp>_raw_<index>.json
+		information about the capture
+
+end note
+U <--  C
+rnote right U #c2ffe4
+return value (json formated)
+  
+  __key__ "CaptureFile"
+
+  __key__ "SensorTemperature"
+  __key__ "Filter"
+  __key__ "Nd"
+  __key__ "Iris"
+
+  __key__ "CameraCfgFile"
+  __key__ "CameraCfgValid"
+  __key__ "OpticalColumnCfgFile"
+  __key__ "OpticalColumnCfgValid"
+  __key__ "FlatFieldCfgFile"
+  __key__ "FlatFieldCfgValid"
+end note
+
+'hnote over C #E86231: state TBD
+
+
+rnote right U
+In state CaptureDone, it is possible to:
+	perform a new capture
+	change the setup and perform a new capture
+end note
+
+
+'hnote over C #E86231: state TBD
+
+newpage
+
+== Stopping ==
+
+U ->   C: CmdReset();
+rnote right U #d9f3ff
+Restart the conoscope
+(actually it is not really stopping)
+end note
+U <--  C
+rnote right U #c2ffe4
+return value (json formated)
+
+  __key__ "CfgPath"
+end note
+
+hnote over C #E86231: state Opened
+
+U ->   C: CmdClose();
+rnote right U #d9f3ff
+Disconnect the conoscope
+end note
+U <--  C
+rnote right U #c2ffe4
+return value (json formated)
+	__key__ "CfgPath" 	this is the location where cfg files will be read
+end note
+
+hnote over C #E86231: state Idle
+
+U ->   C: CmdTerminate();
+rnote right U #d9f3ff
+	terminate all the thread of the dll
+end note
+U <--  C
+
+== DO NOT USE ==
+
+U ->   C: CmdCfgFileWrite();
+rnote right U #d9f3ff
+	using this function will corrupt camera memory
+end note
+U <--  C
+
+
+
+
+
+
+
+@enduml

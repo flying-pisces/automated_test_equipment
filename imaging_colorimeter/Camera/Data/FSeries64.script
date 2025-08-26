@@ -1,0 +1,24 @@
+# 
+
+# DAC on CCD Board accessed through Centerfold
+1	18	00010816 # Set VRD to 10.2V     (11*203 = 2233 = 0x8B9)
+1	18	00011723 # Set GUARD to 9V    ( 9*203 = 1827 = 0x723)
+1	18	0001232C # Set VOG to 4V      ( 4*203 =  812 = 0x32C)
+1	18	00013196 # Set VSS to 2V      ( 2*203 =  406 = 0x196)
+1	18	00014BE5 # Set VDD to 15V     (15*203 = 3045 = 0xBE5)
+1	18	000150CB # Set VCLAMP to 1V   ( 1*203 =  203 = 0x0CB)
+1	18	000167D0 # Set V_RCLKH to 4V  ( 4*500 = 2000 = 0x7D0)
+1	18	000177D0 # Set V_RCLKL to -2V ( 2*1000= 2000 = 0x7D0)
+#1	17	00000A07 # T_VCLOCK_FLUSH, T_HCLOCK_FLUSH
+1	17	00003B07 # T_VCLOCK_FLUSH, T_HCLOCK_FLUSH
+
+# Anchovies Power Control
+0	21	00000003 # Turn on -10V and +20V
+# DAC on Main Board accessed through Anchovies
+0	20	0001095A # Set ADJSRC1  to +6  V for HCLK High ( 6*399  = 2394 = 0x95A)
+0	20	00012640 # Set ADJSINK1 to -4  V for HCLK Low  (-4*-400 = 1600 = 0x640)
+0	20	000110C7 # Set ADJSRC2  to +0.5V for VCLK High ( 0.5*399 = 199 = 0xC7)
+0	20	00013FA0 # Set ADJSINK2 to -10 V for VCLK Low  (-10*-400 = 4000 = 0xFA0)
+
+
+

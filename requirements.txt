@@ -1,0 +1,60 @@
+# Core Python dependencies
+numpy>=1.19.0
+scipy>=1.7.0
+
+# Serial communication
+pyserial>=3.5
+
+# VISA instrument communication
+# Note: Requires NI-VISA Runtime to be installed separately
+# Download from: https://www.ni.com/en-us/support/downloads/drivers/download.ni-visa.html
+pyvisa>=1.11.0
+
+# GUI framework (usually included with Python)
+# tkinter - included with most Python installations
+
+# Data handling and export
+pandas>=1.3.0
+
+# Optional: Camera support (FLIR/Point Grey cameras)
+# Note: Requires Spinnaker SDK to be installed separately
+# Download from: https://www.flir.com/products/spinnaker-sdk/
+# PySpin - install from Spinnaker SDK, not pip
+
+# Optional: Image processing (for camera applications)
+opencv-python>=4.5.0
+Pillow>=8.0.0
+
+# Optional: Advanced data analysis
+matplotlib>=3.3.0
+plotly>=5.0.0
+
+# Development and testing dependencies (optional)
+pytest>=6.0.0
+pytest-cov>=2.12.0
+black>=21.0.0
+flake8>=3.9.0
+mypy>=0.910
+
+# Documentation (optional)
+sphinx>=4.0.0
+sphinx-rtd-theme>=0.5.0
+
+# Utility libraries
+python-dateutil>=2.8.0
+requests>=2.25.0
+
+# Configuration file handling
+pyyaml>=5.4.0
+
+# Logging enhancements
+colorlog>=6.0.0
+
+# Process management
+psutil>=5.8.0
+
+# Threading and async support
+asyncio-mqtt>=0.10.0
+
+# Data validation
+jsonschema>=3.2.0

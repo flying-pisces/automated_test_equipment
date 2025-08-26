@@ -1,0 +1,49 @@
+{
+    "CaptureSequence": {
+        "bAutoExposure": true,
+        "bUseExpoFile": false,
+        "bWaitForSensorTemperature": false,
+        "eIris": 0,
+        "eNd": 0,
+        "exposureTimeUs": 10000,
+        "nbAcquisition": 1,
+        "sensorTemperature": 25
+    },
+    "CmdMeasure": {
+        "bTestPattern": false,
+        "binningFactor": 0,
+        "exposureTimeUs": 40000,
+        "nbAcquisition": 1
+    },
+    "CmdProcessing": {
+        "bAbsolute": true,
+        "bBiasCompensation": true,
+        "bFlatField": true,
+        "bLinearisation": true,
+        "bSensorDefectCorrection": true,
+        "bSensorPrnuCorrection": true
+    },
+    "CmdSetup": {
+        "eFilter": 2,
+        "eIris": 0,
+        "eNd": 0,
+        "sensorTemperature": 25
+    },
+    "DebugSettings": {
+        "debugMode": false,
+        "dummyRawImagePath": "",
+        "emulateCamera": false
+    },
+    "Settings": {
+        "autoExposure": false,
+        "autoExposurePixelMax": 80,
+        "capturePath": "./Capture",
+        "cfgPath": "./Cfg"
+    },
+    "SettingsI": {
+        "captureSequenceAEProcessed": true,
+        "captureSequenceMaxNbPixel": 5000,
+        "cfgFileIsZip": true,
+        "cfgFileName": "Cfg.zip"
+    }
+}

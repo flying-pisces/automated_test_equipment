@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<trx>
+  <CameraCalibrationPath>C:\Radiant Vision Systems Data\Camera Data\Calibration Files\</CameraCalibrationPath>
+  <MeasurementDatabasePath>C:\Radiant Vision Systems Data\TrueTest\UserData\Demo.ttxm</MeasurementDatabasePath>
+  <SequenceFilePath>C:\Radiant Vision Systems Data\TrueTest\UserData\Demo Sequence.seqx</SequenceFilePath>
+  <MultiChannelAnalysis>False</MultiChannelAnalysis>
+  <MeasurementSequenceMode>Asynchronous</MeasurementSequenceMode>
+  <AnalysisSequenceMode>Asynchronous</AnalysisSequenceMode>
+</trx>

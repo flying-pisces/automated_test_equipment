@@ -1,0 +1,26 @@
+# 
+
+# DAC on CCD Board accessed through Centerfold
+1	18	00010853 # Set VRD to 10.5V     (10.5*203 = 2131.5 = 0x853)
+1	18	000117EE # Set GUARD to 10V   (10*203 = 2030 = 0x7EE)
+1	18	0001232C # Set VOG to 4V      ( 4*203 =  812 = 0x32C)
+1	18	00013196 # Set VSS to 2V      ( 2*203 =  406 = 0x196)
+1	18	00014BE5 # Set VDD to 15V     (15*203 = 3045 = 0xBE5)
+1	18	00015196 # Set VCLAMP to 2V   ( 2*203 =  406 = 0x196)
+1	18	000167D0 # Set V_RCLKH to 4V  ( 4*500 = 2000 = 0x7D0)
+1	18	00017BB8 # Set V_RCLKL to -3V ( 3*1000= 3000 = 0xBB8)
+
+# Anchovies Power Control
+0	21	00000003 # Turn on -10V and +20V
+# DAC on Main Board accessed through Anchovies
+0	20	00010AE9 # Set ADJSRC1  to +7  V for HCLK High ( 7*399  = 2793 = 0xAE9)
+0	20	000124B0 # Set ADJSINK1 to -3  V for HCLK Low  (-3*-400 = 1200 = 0x4B0)
+0	20	0001118F # Set ADJSRC2  to +1  V for VCLK High ( 1*399  = 399  = 0x18F)
+0	20	00013FA0 # Set ADJSINK2 to -10 V for VCLK Low  (-10*-400= 4000 = 0xFA0)
+
+# Imaging ADC registers
+1	19	00012026 # set red input to gain 2
+1	19	00013026 # set green input to gain 2
+1	19	00011020 # select blue input: Op-amp 2x gain, low-pass filtered
+
+1	17	0000FF05 # T_VCLK_FLUSH, T_HCLK_FLUSH (Set VCLK period to two lines of HCLK, except max is 255us!)

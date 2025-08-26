@@ -1,0 +1,18 @@
+_config.autoExposurePixelMax
+
+<TimeStamp>
+<Filter>
+<Nd>
+<Iris>
+<ExpoTime>
+<NbAcq>
+<Height>
+<Width>
+
+<SatFlag>
+<SatLevel>
+
+<AeExpoGran>
+
+default format
+<TimeStamp>_filt_<Filter>_nd_<Nd>_iris_<Iris>

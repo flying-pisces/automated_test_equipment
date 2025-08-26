@@ -1,0 +1,215 @@
+<OpticalColumnConfigFile>
+    <Content>
+        <Revision>
+            <Major>1</Major>
+            <Minor>1</Minor>
+            <Stage>
+                <Type>1</Type>
+                <Count>1</Count>
+            </Stage>
+        </Revision>
+        
+        <Equipment>
+            <Type>TBD</Type>
+            <Description>TBD</Description>
+            <Location>ELDIM</Location>
+            <Revision>V1</Revision>
+            <SerialNumber></SerialNumber>
+        </Equipment>
+        
+        <Linearisation>
+            <Coefficient FilterIndex="0" A1="0.1" A3="0.3" A5="0.5" A7="0.7" A9="0.9"/>
+            <Coefficient FilterIndex="1" A1="1.1" A3="1.3" A5="1.5" A7="1.7" A9="1.9"/>
+            <Coefficient FilterIndex="2" A1="2.1" A3="2.3" A5="2.5" A7="2.7" A9="2.9"/>
+            <Coefficient FilterIndex="3" A1="3.1" A3="3.3" A5="3.5" A7="3.7" A9="3.9"/>
+            <Coefficient FilterIndex="4" A1="4.1" A3="4.3" A5="4.5" A7="4.7" A9="4.9"/>
+            <Coefficient FilterIndex="5" A1="5.1" A3="5.3" A5="5.5" A7="5.7" A9="5.9"/>
+        </Linearisation>
+        
+        <Center>
+            <OpticalAxis FilterIndex="0" NdIndex="0" X="0" Y="100"/>
+            <OpticalAxis FilterIndex="0" NdIndex="1" X="1" Y="101"/>
+            <OpticalAxis FilterIndex="0" NdIndex="2" X="2" Y="102"/>
+            <OpticalAxis FilterIndex="0" NdIndex="3" X="3" Y="103"/>
+            <OpticalAxis FilterIndex="0" NdIndex="4" X="4" Y="104"/>
+            
+            <OpticalAxis FilterIndex="1" NdIndex="0" X="10" Y="110"/>
+            <OpticalAxis FilterIndex="1" NdIndex="1" X="11" Y="111"/>
+            <OpticalAxis FilterIndex="1" NdIndex="2" X="12" Y="112"/>
+            <OpticalAxis FilterIndex="1" NdIndex="3" X="13" Y="113"/>
+            <OpticalAxis FilterIndex="1" NdIndex="4" X="14" Y="114"/>
+            
+            <OpticalAxis FilterIndex="2" NdIndex="0" X="20" Y="120"/>
+            <OpticalAxis FilterIndex="2" NdIndex="1" X="21" Y="121"/>
+            <OpticalAxis FilterIndex="2" NdIndex="2" X="22" Y="122"/>
+            <OpticalAxis FilterIndex="2" NdIndex="3" X="23" Y="123"/>
+            <OpticalAxis FilterIndex="2" NdIndex="4" X="24" Y="124"/>
+            
+            <OpticalAxis FilterIndex="3" NdIndex="0" X="30" Y="130"/>
+            <OpticalAxis FilterIndex="3" NdIndex="1" X="31" Y="131"/>
+            <OpticalAxis FilterIndex="3" NdIndex="2" X="32" Y="132"/>
+            <OpticalAxis FilterIndex="3" NdIndex="3" X="33" Y="133"/>
+            <OpticalAxis FilterIndex="3" NdIndex="4" X="34" Y="134"/>
+            
+            <OpticalAxis FilterIndex="4" NdIndex="0" X="40" Y="140"/>
+            <OpticalAxis FilterIndex="4" NdIndex="1" X="41" Y="141"/>
+            <OpticalAxis FilterIndex="4" NdIndex="2" X="42" Y="142"/>
+            <OpticalAxis FilterIndex="4" NdIndex="3" X="43" Y="143"/>
+            <OpticalAxis FilterIndex="4" NdIndex="4" X="44" Y="144"/>
+            
+            <OpticalAxis FilterIndex="5" NdIndex="0" X="50" Y="150"/>
+            <OpticalAxis FilterIndex="5" NdIndex="1" X="51" Y="151"/>
+            <OpticalAxis FilterIndex="5" NdIndex="2" X="52" Y="152"/>
+            <OpticalAxis FilterIndex="5" NdIndex="3" X="53" Y="153"/>
+            <OpticalAxis FilterIndex="5" NdIndex="4" X="54" Y="154"/>
+        </Center>
+        
+        <ColorCoef>
+            <Coef IrisIndex="0" FilterIndex="0" NdIndex="0" Coef="00"/>
+            <Coef IrisIndex="0" FilterIndex="0" NdIndex="1" Coef="01"/>
+            <Coef IrisIndex="0" FilterIndex="0" NdIndex="2" Coef="02"/>
+            <Coef IrisIndex="0" FilterIndex="0" NdIndex="3" Coef="03"/>
+            <Coef IrisIndex="0" FilterIndex="0" NdIndex="4" Coef="04"/>
+
+            <Coef IrisIndex="0" FilterIndex="1" NdIndex="0" Coef="10"/>
+            <Coef IrisIndex="0" FilterIndex="1" NdIndex="1" Coef="11"/>
+            <Coef IrisIndex="0" FilterIndex="1" NdIndex="2" Coef="12"/>
+            <Coef IrisIndex="0" FilterIndex="1" NdIndex="3" Coef="13"/>
+            <Coef IrisIndex="0" FilterIndex="1" NdIndex="4" Coef="14"/>
+        
+            <Coef IrisIndex="0" FilterIndex="2" NdIndex="0" Coef="20"/>
+            <Coef IrisIndex="0" FilterIndex="2" NdIndex="1" Coef="21"/>
+            <Coef IrisIndex="0" FilterIndex="2" NdIndex="2" Coef="22"/>
+            <Coef IrisIndex="0" FilterIndex="2" NdIndex="3" Coef="23"/>
+            <Coef IrisIndex="0" FilterIndex="2" NdIndex="4" Coef="24"/>
+
+            <Coef IrisIndex="0" FilterIndex="3" NdIndex="0" Coef="30"/>
+            <Coef IrisIndex="0" FilterIndex="3" NdIndex="1" Coef="31"/>
+            <Coef IrisIndex="0" FilterIndex="3" NdIndex="2" Coef="32"/>
+            <Coef IrisIndex="0" FilterIndex="3" NdIndex="3" Coef="33"/>
+            <Coef IrisIndex="0" FilterIndex="3" NdIndex="4" Coef="34"/>
+        
+            <Coef IrisIndex="0" FilterIndex="4" NdIndex="0" Coef="40"/>
+            <Coef IrisIndex="0" FilterIndex="4" NdIndex="1" Coef="41"/>
+            <Coef IrisIndex="0" FilterIndex="4" NdIndex="2" Coef="42"/>
+            <Coef IrisIndex="0" FilterIndex="4" NdIndex="3" Coef="43"/>
+            <Coef IrisIndex="0" FilterIndex="4" NdIndex="4" Coef="44"/>
+
+            <Coef IrisIndex="0" FilterIndex="5" NdIndex="0" Coef="50"/>
+            <Coef IrisIndex="0" FilterIndex="5" NdIndex="1" Coef="51"/>
+            <Coef IrisIndex="0" FilterIndex="5" NdIndex="2" Coef="52"/>
+            <Coef IrisIndex="0" FilterIndex="5" NdIndex="3" Coef="53"/>
+            <Coef IrisIndex="0" FilterIndex="5" NdIndex="4" Coef="54"/>
+
+            <Coef IrisIndex="1" FilterIndex="0" NdIndex="0" Coef="100"/>
+            <Coef IrisIndex="1" FilterIndex="0" NdIndex="1" Coef="101"/>
+            <Coef IrisIndex="1" FilterIndex="0" NdIndex="2" Coef="102"/>
+            <Coef IrisIndex="1" FilterIndex="0" NdIndex="3" Coef="103"/>
+            <Coef IrisIndex="1" FilterIndex="0" NdIndex="4" Coef="104"/>
+
+            <Coef IrisIndex="1" FilterIndex="1" NdIndex="0" Coef="110"/>
+            <Coef IrisIndex="1" FilterIndex="1" NdIndex="1" Coef="111"/>
+            <Coef IrisIndex="1" FilterIndex="1" NdIndex="2" Coef="112"/>
+            <Coef IrisIndex="1" FilterIndex="1" NdIndex="3" Coef="113"/>
+            <Coef IrisIndex="1" FilterIndex="1" NdIndex="4" Coef="114"/>
+
+            <Coef IrisIndex="1" FilterIndex="2" NdIndex="0" Coef="120"/>
+            <Coef IrisIndex="1" FilterIndex="2" NdIndex="1" Coef="121"/>
+            <Coef IrisIndex="1" FilterIndex="2" NdIndex="2" Coef="122"/>
+            <Coef IrisIndex="1" FilterIndex="2" NdIndex="3" Coef="123"/>
+            <Coef IrisIndex="1" FilterIndex="2" NdIndex="4" Coef="124"/>
+
+            <Coef IrisIndex="1" FilterIndex="3" NdIndex="0" Coef="130"/>
+            <Coef IrisIndex="1" FilterIndex="3" NdIndex="1" Coef="131"/>
+            <Coef IrisIndex="1" FilterIndex="3" NdIndex="2" Coef="132"/>
+            <Coef IrisIndex="1" FilterIndex="3" NdIndex="3" Coef="133"/>
+            <Coef IrisIndex="1" FilterIndex="3" NdIndex="4" Coef="134"/>
+
+            <Coef IrisIndex="1" FilterIndex="4" NdIndex="0" Coef="140"/>
+            <Coef IrisIndex="1" FilterIndex="4" NdIndex="1" Coef="141"/>
+            <Coef IrisIndex="1" FilterIndex="4" NdIndex="2" Coef="142"/>
+            <Coef IrisIndex="1" FilterIndex="4" NdIndex="3" Coef="143"/>
+            <Coef IrisIndex="1" FilterIndex="4" NdIndex="4" Coef="144"/>
+
+            <Coef IrisIndex="1" FilterIndex="5" NdIndex="0" Coef="150"/>
+            <Coef IrisIndex="1" FilterIndex="5" NdIndex="1" Coef="151"/>
+            <Coef IrisIndex="1" FilterIndex="5" NdIndex="2" Coef="152"/>
+            <Coef IrisIndex="1" FilterIndex="5" NdIndex="3" Coef="153"/>
+            <Coef IrisIndex="1" FilterIndex="5" NdIndex="4" Coef="154"/>
+
+            <Coef IrisIndex="2" FilterIndex="0" NdIndex="0" Coef="200"/>
+            <Coef IrisIndex="2" FilterIndex="0" NdIndex="1" Coef="201"/>
+            <Coef IrisIndex="2" FilterIndex="0" NdIndex="2" Coef="202"/>
+            <Coef IrisIndex="2" FilterIndex="0" NdIndex="3" Coef="203"/>
+            <Coef IrisIndex="2" FilterIndex="0" NdIndex="4" Coef="204"/>
+
+            <Coef IrisIndex="2" FilterIndex="1" NdIndex="0" Coef="210"/>
+            <Coef IrisIndex="2" FilterIndex="1" NdIndex="1" Coef="211"/>
+            <Coef IrisIndex="2" FilterIndex="1" NdIndex="2" Coef="212"/>
+            <Coef IrisIndex="2" FilterIndex="1" NdIndex="3" Coef="213"/>
+            <Coef IrisIndex="2" FilterIndex="1" NdIndex="4" Coef="214"/>
+
+            <Coef IrisIndex="2" FilterIndex="2" NdIndex="0" Coef="220"/>
+            <Coef IrisIndex="2" FilterIndex="2" NdIndex="1" Coef="221"/>
+            <Coef IrisIndex="2" FilterIndex="2" NdIndex="2" Coef="222"/>
+            <Coef IrisIndex="2" FilterIndex="2" NdIndex="3" Coef="223"/>
+            <Coef IrisIndex="2" FilterIndex="2" NdIndex="4" Coef="224"/>
+
+            <Coef IrisIndex="2" FilterIndex="3" NdIndex="0" Coef="230"/>
+            <Coef IrisIndex="2" FilterIndex="3" NdIndex="1" Coef="231"/>
+            <Coef IrisIndex="2" FilterIndex="3" NdIndex="2" Coef="232"/>
+            <Coef IrisIndex="2" FilterIndex="3" NdIndex="3" Coef="233"/>
+            <Coef IrisIndex="2" FilterIndex="3" NdIndex="4" Coef="234"/>
+
+            <Coef IrisIndex="2" FilterIndex="4" NdIndex="0" Coef="240"/>
+            <Coef IrisIndex="2" FilterIndex="4" NdIndex="1" Coef="241"/>
+            <Coef IrisIndex="2" FilterIndex="4" NdIndex="2" Coef="242"/>
+            <Coef IrisIndex="2" FilterIndex="4" NdIndex="3" Coef="243"/>
+            <Coef IrisIndex="2" FilterIndex="4" NdIndex="4" Coef="244"/>
+
+            <Coef IrisIndex="2" FilterIndex="5" NdIndex="0" Coef="250"/>
+            <Coef IrisIndex="2" FilterIndex="5" NdIndex="1" Coef="251"/>
+            <Coef IrisIndex="2" FilterIndex="5" NdIndex="2" Coef="252"/>
+            <Coef IrisIndex="2" FilterIndex="5" NdIndex="3" Coef="253"/>
+            <Coef IrisIndex="2" FilterIndex="5" NdIndex="4" Coef="254"/>
+
+            <Coef IrisIndex="3" FilterIndex="0" NdIndex="0" Coef="300"/>
+            <Coef IrisIndex="3" FilterIndex="0" NdIndex="1" Coef="301"/>
+            <Coef IrisIndex="3" FilterIndex="0" NdIndex="2" Coef="302"/>
+            <Coef IrisIndex="3" FilterIndex="0" NdIndex="3" Coef="303"/>
+            <Coef IrisIndex="3" FilterIndex="0" NdIndex="4" Coef="304"/>
+
+            <Coef IrisIndex="3" FilterIndex="1" NdIndex="0" Coef="310"/>
+            <Coef IrisIndex="3" FilterIndex="1" NdIndex="1" Coef="311"/>
+            <Coef IrisIndex="3" FilterIndex="1" NdIndex="2" Coef="312"/>
+            <Coef IrisIndex="3" FilterIndex="1" NdIndex="3" Coef="313"/>
+            <Coef IrisIndex="3" FilterIndex="1" NdIndex="4" Coef="314"/>
+
+            <Coef IrisIndex="3" FilterIndex="2" NdIndex="0" Coef="320"/>
+            <Coef IrisIndex="3" FilterIndex="2" NdIndex="1" Coef="321"/>
+            <Coef IrisIndex="3" FilterIndex="2" NdIndex="2" Coef="322"/>
+            <Coef IrisIndex="3" FilterIndex="2" NdIndex="3" Coef="323"/>
+            <Coef IrisIndex="3" FilterIndex="2" NdIndex="4" Coef="324"/>
+
+            <Coef IrisIndex="3" FilterIndex="3" NdIndex="0" Coef="330"/>
+            <Coef IrisIndex="3" FilterIndex="3" NdIndex="1" Coef="331"/>
+            <Coef IrisIndex="3" FilterIndex="3" NdIndex="2" Coef="332"/>
+            <Coef IrisIndex="3" FilterIndex="3" NdIndex="3" Coef="333"/>
+            <Coef IrisIndex="3" FilterIndex="3" NdIndex="4" Coef="334"/>
+
+            <Coef IrisIndex="3" FilterIndex="4" NdIndex="0" Coef="340"/>
+            <Coef IrisIndex="3" FilterIndex="4" NdIndex="1" Coef="341"/>
+            <Coef IrisIndex="3" FilterIndex="4" NdIndex="2" Coef="342"/>
+            <Coef IrisIndex="3" FilterIndex="4" NdIndex="3" Coef="343"/>
+            <Coef IrisIndex="3" FilterIndex="4" NdIndex="4" Coef="344"/>
+
+            <Coef IrisIndex="3" FilterIndex="5" NdIndex="0" Coef="350"/>
+            <Coef IrisIndex="3" FilterIndex="5" NdIndex="1" Coef="351"/>
+            <Coef IrisIndex="3" FilterIndex="5" NdIndex="2" Coef="352"/>
+            <Coef IrisIndex="3" FilterIndex="5" NdIndex="3" Coef="353"/>
+            <Coef IrisIndex="3" FilterIndex="5" NdIndex="4" Coef="354"/>
+        </ColorCoef>
+    </Content>
+</OpticalColumnConfigFile> 
+ 
+ 

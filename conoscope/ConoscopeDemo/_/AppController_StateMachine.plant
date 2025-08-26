@@ -1,0 +1,57 @@
+@startuml
+
+title **AppController** state machine
+
+Undefined          : thread is not running 
+Idle               :
+
+'Closing : NA
+'Reseting : NA
+
+state Connected {
+
+  Opening            : connecting camera
+  Opened             : camera is connected
+  
+  Reseting           :
+
+
+  state Ready {
+  
+    Measuring          : capturing raw data
+    MeasureDone        : ** A capture is ready **
+  
+    Processing         :
+  
+  }
+
+  Opening            -->      Opened
+
+  Opened             -->      Setuping           : **  CmdSetup**()
+  Ready              -->      Setuping           : **  CmdSetup**()
+  Setuping           -->      Ready              : ^SetupDone
+
+  Ready              -->      Measuring          : **  CmdMeasure**()
+  Measuring          -->      MeasureDone        : ^MeasureDone
+
+  MeasureDone        -->      Measuring          : **  CmdMeasure**()
+
+  MeasureDone        -->      Processing         : **  CmdExport**()
+
+  Processing         -->      MeasureDone
+
+  Connected          -->      Reseting           : **  CmdReset**()
+  Reseting           -->      Opened
+}
+
+[*]                -->      Undefined
+Undefined          -->      Idle                 : ** ^**thread is running
+
+Idle               -->      Opening              : **  CmdOpen**()
+Idle               -->      Reseting             : **  CmdReset**()
+
+
+Connected          -up->    Closing              : **  CmdClose**()
+Closing            -up->    Idle
+
+@enduml

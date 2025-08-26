@@ -1,0 +1,37 @@
+# 
+
+# DAC on CCD Board accessed through Centerfold
+1	18	0001090F # Set VRD to 11.42V     (12*203 = 2436 = 0x984)
+1	18	000117EE # Set GUARD to 10V   (10*203 = 2030 = 0x7EE)
+1	18	00012392 # Set VOG to 4.5V    (4.5*203=  914 = 0x392)
+1	18	00013196 # Set VSS to 2V      ( 2*203 =  406 = 0x196)
+1	18	00014D7B # Set VDD to 17V     (17*203 = 3451 = 0xD7B)
+1	18	000167EE # Set V_RCLKH to 10V (10*203 = 2030 = 0x7EE)
+1	18	00017261 # Set V_RCLKL to 3V  ( 3*203 =  609 = 0x261)
+
+# Anchovies Power Control
+0	21	00000003 # Turn on -10V and +20V
+# DAC on Main Board accessed through Anchovies
+0	20	00010C78 # Set ADJSRC1  to +8  V for HCLK High ( 8*399  = 3192 = 0xC78)
+0	20	00012320 # Set ADJSINK1 to -2  V for HCLK Low  (-2*-400 = 800 = 0x320)
+0	20	00011000 # Set ADJSRC2: unused
+0	20	00013FA0 # Set ADJSINK2 to -10 V for VCLK Low  (-10*-400 = 4000 = 0xFA0)
+
+# Imaging ADC registers
+1	19	00012026 # set red input to gain 2
+1	19	00013026 # set green input to gain 2
+1	19	00015010 # set red input offset to 19.2mV
+1	19	00016010 # set green input offset to 19.2mV
+1	19	00017010 # set blue input offset to 19.2mV
+1	19	00011040 # select red input 
+
+# Setup CCD Imaging controls
+1	11	02080212	# VSIZE = 4+512+4, HSIZE = 4+4+512+8+2
+1	12	00080207	# HBIN, Subframe X start & Stop
+1	13	00040203	# VBIN, Subframe Y start & Stop
+# Timing Generator Controls
+1	14	0000010A # T_VDLY, T_VCLK
+1	15	430A7D43 # T_HCLK, T_RCLK, T_ADCCLKR, T_ADCCLKW (1MHz)
+1	16	213F6482 # T_CDSCLK1R, T_CDSCLK1F, T_CDSCLK2R, T_CDSCLK2F 
+1	17	00008F09 # T_VCLK_FLUSH, T_HCLK_FLUSH (Set VCLK period to two lines of HCLK)
+

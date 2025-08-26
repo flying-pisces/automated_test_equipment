@@ -1,0 +1,13 @@
+#ifndef CONFIGURATION_H
+#define CONFIGURATION_H
+
+#define APPLICATION_NAME   "CONOSCOPE_LIB"
+
+#define VERSION_MAJOR      0
+#define VERSION_MINOR      15
+#define VERSION_REV        54
+#define RELEASE_DATE       "2021/01/05"
+#define VERSION_STR        QString("%1.%2.%3").arg(VERSION_MAJOR).arg(VERSION_MINOR).arg(VERSION_REV)
+#define APPLICATION_TITLE  QString("%1 - %2 (%3)").arg(APPLICATION_NAME).arg(VERSION_STR).arg(RELEASE_DATE)
+
+#endif // CONFIGURATION_H

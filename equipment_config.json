@@ -1,0 +1,47 @@
+{
+  "DMM_Lab": {
+    "type": "agilent_dmm",
+    "config": {
+      "name": "Laboratory DMM",
+      "visa_address": "TCPIP::192.168.1.100::INSTR"
+    }
+  },
+  "PowerSupply_Bench": {
+    "type": "agilent_power_supply",
+    "config": {
+      "name": "Bench Power Supply",
+      "visa_address": "TCPIP::192.168.1.101::INSTR",
+      "model": "e3646a"
+    }
+  },
+  "Relay_Controller": {
+    "type": "kta_relay",
+    "config": {
+      "name": "KTA Relay Box",
+      "com_port": "COM3",
+      "baud_rate": 9600
+    }
+  },
+  "Camera_Overhead": {
+    "type": "camera",
+    "config": {
+      "name": "Overhead Camera",
+      "camera_index": 0
+    }
+  },
+  "DMM_Secondary": {
+    "type": "agilent_dmm",
+    "config": {
+      "name": "Secondary DMM",
+      "visa_address": "USB0::0x0957::0x1A07::MY53204664::INSTR"
+    }
+  },
+  "PowerSupply_DUT": {
+    "type": "agilent_power_supply",
+    "config": {
+      "name": "DUT Power Supply",
+      "visa_address": "TCPIP::192.168.1.102::INSTR",
+      "model": "e3648a"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+
+In order to build a release application:
+Compile the application in release
+Copy ConoscopeDemo.exe in an empty folder (i.e. ReleaseFolder)
+Run windeployqt.exe to add missing dll
+
+Compile all DLLs in release
+Copy ConoscopeLib.dll and PipelineLib.dll in ReleaseFolder
+In order to have the application running
+add Qt5Xml.dll, Qt5Core.dll
