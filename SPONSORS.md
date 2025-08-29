@@ -1,6 +1,22 @@
 # 💝 Sponsorship & Support
 
+<div align="center">
+
+![Sponsors](https://img.shields.io/badge/Sponsors-0-brightgreen?style=for-the-badge)
+![Monthly Goal](https://img.shields.io/badge/Monthly%20Goal-$500-blue?style=for-the-badge)
+![Funding](https://img.shields.io/badge/Funding-$0%2F$500-red?style=for-the-badge)
+
+</div>
+
 Thank you for considering sponsoring the Automated Test Equipment project! Your support helps maintain and expand this open-source laboratory automation framework.
+
+## 🎯 **Current Funding Goal: $500/month**
+
+We need your help to reach our first milestone! This funding will enable:
+- **2 new equipment drivers per month**
+- **Weekly documentation updates**  
+- **Dedicated testing hardware**
+- **Community support & maintenance**
 
 ## 🎯 Sponsorship Tiers
 

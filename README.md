@@ -6,6 +6,64 @@ A comprehensive Python framework for controlling laboratory instruments with uni
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
 
+---
+
+<div align="center">
+
+# 💖 SPONSOR THIS PROJECT 💖
+
+### 🚨 **Support Open Source Lab Automation** 🚨
+
+<table>
+<tr>
+<td align="center" width="25%">
+<h3>🌟 Lab Supporter</h3>
+<h2>$4.99/month</h2>
+<p>✅ Digital sponsor badge<br/>
+✅ Monthly updates<br/>
+✅ Discord access</p>
+</td>
+<td align="center" width="25%" style="background-color: #f0f8ff;">
+<h3>🔧 Equipment Enthusiast</h3>
+<h2>$19.99/month</h2>
+<p>✅ Everything above +<br/>
+✅ <strong>3D printable CNC files</strong><br/>
+✅ Early access releases</p>
+</td>
+<td align="center" width="25%" style="background-color: #fff8dc;">
+<h3>💼 Professional Developer</h3>
+<h2>$99.99/month</h2>
+<p>✅ Everything above +<br/>
+✅ <strong>1-hour monthly consultation</strong><br/>
+✅ Logo placement</p>
+</td>
+<td align="center" width="25%" style="background-color: #f0fff0;">
+<h3>🚀 Innovation Sponsor</h3>
+<h2>$999.99/month</h2>
+<p>✅ Everything above +<br/>
+✅ <strong>Custom equipment automation</strong><br/>
+✅ Priority development</p>
+</td>
+</tr>
+</table>
+
+## 🎯 [**BECOME A SPONSOR NOW**](https://github.com/sponsors/cyin) 🎯
+
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub-red?style=for-the-badge&logo=github)](https://github.com/sponsors/cyin)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/cyin)
+[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/cyin)
+
+### 💡 **Why Sponsor?**
+- 🔬 **500+ GitHub Stars** • **1000+ Monthly Downloads** • **100+ Research Institutions**
+- 🎯 **Your funding directly develops new equipment drivers**
+- 🏆 **Join companies like [Your Company Here] supporting open science**
+
+[📋 **VIEW ALL SPONSOR TIERS & BENEFITS**](SPONSORS.md)
+
+</div>
+
+---
+
 ## 🚀 Features
 
 - **Universal Equipment Interface** - Standardized API for all instrument types
@@ -321,17 +379,7 @@ result = equipment.self_test()  # Returns True/False
 
 ## 💝 Sponsorship & Support
 
-This project is maintained by volunteers. Your sponsorship helps us:
-- Develop new equipment drivers
-- Improve documentation and tutorials  
-- Maintain testing infrastructure
-- Support the community
-
-### 🎯 Sponsor Tiers
-- **$4.99/month** - Get a sponsor badge and monthly updates
-- **$19.99/month** - Plus 3D printable CNC files and early access
-- **$99.99/month** - Plus 1-hour monthly consultation with developers
-- **$299.99+/month** - Priority feature development and custom automation
+**Already sponsored? Thank you!** This project is maintained by volunteers and your support makes all the difference.
 
 [**💖 Become a Sponsor**](https://github.com/sponsors/cyin) • [**📋 See all tiers**](SPONSORS.md)
 
