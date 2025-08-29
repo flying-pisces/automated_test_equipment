@@ -1,3 +1,8 @@
 # These are supported funding model platforms
 
-github: [cyin]  # Replace with your GitHub username
+github: [cyin]
+patreon: cyin
+ko_fi: cyin
+buy_me_a_coffee: cyin
+paypal: cyin
+custom: ["https://yourproject.com/sponsor", "mailto:sponsor@yourproject.com"]

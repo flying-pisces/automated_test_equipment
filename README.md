@@ -319,6 +319,22 @@ equipment.connect()
 result = equipment.self_test()  # Returns True/False
 ```
 
+## 💝 Sponsorship & Support
+
+This project is maintained by volunteers. Your sponsorship helps us:
+- Develop new equipment drivers
+- Improve documentation and tutorials  
+- Maintain testing infrastructure
+- Support the community
+
+### 🎯 Sponsor Tiers
+- **$4.99/month** - Get a sponsor badge and monthly updates
+- **$19.99/month** - Plus 3D printable CNC files and early access
+- **$99.99/month** - Plus 1-hour monthly consultation with developers
+- **$299.99+/month** - Priority feature development and custom automation
+
+[**💖 Become a Sponsor**](https://github.com/sponsors/cyin) • [**📋 See all tiers**](SPONSORS.md)
+
 ## 🤝 Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
