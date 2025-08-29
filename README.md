@@ -50,8 +50,8 @@ A comprehensive Python framework for controlling laboratory instruments with uni
 ## 🎯 [**BECOME A SPONSOR NOW**](https://github.com/sponsors/cyin) 🎯
 
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub-red?style=for-the-badge&logo=github)](https://github.com/sponsors/cyin)
-[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/cyin)
-[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/cyin)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/paypalme/yinye0)
+[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/flyingpisces)
 
 ### 💡 **Why Sponsor?**
 - 🔬 **500+ GitHub Stars** • **1000+ Monthly Downloads** • **100+ Research Institutions**
